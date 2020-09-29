@@ -7,7 +7,11 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title></title>
     <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=pr5oULMQu1pFXGSl6rog0w6WtwEqaGMe"></script>
+
+    <script type="text/javascript" src="https://cdnweb04.96225.com/helloBike/hzt/layer_mobile/layer.js"></script>
+    <!-- 接入统一文件 -->
     <script src="https://activity.96225.com/exthtml/smkSDK/JSSdk-2.7.0.js"></script>
+    <script src="https://cdnweb04.96225.com/exthtml/smkSDK/analyze-4.0.1.js"></script>
 </head>
 <body>
 <noscript>
@@ -16,6 +20,11 @@
 <div id="app"></div>
 <!-- built files will be auto injected -->
 <script>
+    const baseUrl = 'http://115.236.162.166:18081/'
+    const baseUrl1 = 'http://115.236.162.166:18081/' //授权
+    const homeURL = 'http://115.236.162.166:18081/exthtml/newBusiness/youngTalentCard/hzYouthTalentCard/index.html#/' // 青年生产首页
+    const selfURL = 'http://115.236.162.166:18081/exthtml/newBusiness/hangZhouTalentCard/index.html#/index'
+    var env_type = 'test';//'live';//埋点统计
     (function (doc, win) {
         var docEl = doc.documentElement,
             widthPoint = 750,
@@ -52,5 +61,18 @@
     // 初始化
     var vConsole = new VConsole();
   </script> -->
+  <script src="https://qiyukf.com/script/54cd89c8600515bd0f81dc9c63492d1e.js"></script>
+  <script>
+    // window.onload = function(){
+    // alert('执行隐藏')
+    if (document.querySelector('#YSF-BTN-HOLDER')) {
+      document.querySelector('#YSF-BTN-HOLDER').style.display = 'none'
+    } else {
+      setTimeout(function () {
+        document.querySelector('#YSF-BTN-HOLDER').style.display = 'none'
+      }, 2000)
+    }
+      // }
+  </script>
 </body>
 </html>

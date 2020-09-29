@@ -4,6 +4,13 @@ import router from './router'
 import store from './store'
 import { Loading } from 'vant';
 
+import './assets/css/comcss.css'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+Vue.use(MintUI)
+
+
 Vue.use(Loading);
 
 Vue.config.productionTip = false
