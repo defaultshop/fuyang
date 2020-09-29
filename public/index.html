@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui,viewport-fit=cover;">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title></title>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=pr5oULMQu1pFXGSl6rog0w6WtwEqaGMe"></script>
+    <script src="https://activity.96225.com/exthtml/smkSDK/JSSdk-2.7.0.js"></script>
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            widthPoint = 750,
+            resizeEvt =
+                "orientationchange" in window ? "orientationchange" : "resize",
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth >= widthPoint) {
+                    // docEl.style.fontSize = "100px";
+                    docEl.style.fontSize = 100 * (clientWidth / widthPoint)*2 + "px";
+                } else {
+                    docEl.style.fontSize = 100 * (clientWidth / widthPoint)*2 + "px";
+                }
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+
+        docEl.addEventListener(
+            "touchstart",
+            function (event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            },
+            false
+        );
+    })(document, window);
+</script>
+  <!-- 测试代码 -->
+  <!-- <script src="https://cdnweb04.96225.com/exthtml/unionAct/act1/vconsole.min.js"></script>
+  <script>
+    // 初始化
+    var vConsole = new VConsole();
+  </script> -->
+</body>
+</html>
