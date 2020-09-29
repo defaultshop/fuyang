@@ -3,7 +3,7 @@
     <div>
         <img :src="list.img" alt="" class='headerImg'>
         <div class="content">
-            <div class='main' v-if='isText'>{{list.text}}</div>
+            <slot></slot>
         </div>
     </div>
 </div>
@@ -17,14 +17,6 @@ export default{
             type: String,
             default: ''
         },
-        text: { //内容
-            type: String,
-            default: '内容'
-        },
-        isText:{ //是否显示
-            type: Boolean,
-            default: false
-        },
         list:{ //数据
             type: Object,
         }
@@ -37,12 +29,6 @@ export default{
     .headerImg{
         width: 100%;
         height: 155px;
-    }
-    .main{
-        padding: 20px 15px 0;
-        text-align: justify;
-        text-indent: 30px;
-        line-height: 32px;
     }
 }
 </style>

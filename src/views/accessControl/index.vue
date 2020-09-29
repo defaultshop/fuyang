@@ -2,8 +2,8 @@
     <div>
         <NavBar :title="accessControl.title"></NavBar>
         <Model1 
-          :isText='true'  
           :list='accessControl'>
+          <div class='main'>{{accessControl.text}}</div>
         </Model1>
         <Confirm :text='accessControl.btnText'></Confirm>
     </div>
@@ -26,3 +26,12 @@ export default{
     }
 }
 </script>  
+
+<style lang="scss">
+ .main{
+        padding: 20px 15px 0;
+        text-align: justify;
+        text-indent: 30px;
+        line-height: 32px;
+    }
+</style>

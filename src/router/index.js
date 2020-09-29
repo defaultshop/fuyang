@@ -12,7 +12,15 @@ const routes = [
     meta: {
       title: '区政府大门出入'
     }
-  }
+  },
+  {
+    path: '/hotelOffers', //酒店优惠
+    name: 'hotelOffers',
+    component: () => import ('@/views/hotelOffers/index.vue'),
+    meta: {
+      title: '酒店优惠'
+    }
+  },
 ]
 
 const router = new VueRouter({
