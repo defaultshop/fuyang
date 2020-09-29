@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class='eachItem'>
+        <div class='eachItem' @click='itemButton'>
             <img :src="list.img" alt="" class='leftImg'>
             <div class='rightText'>
                 <p>{{list.header}}</p>
@@ -35,6 +35,11 @@ export default{
     data(){
         return{
             
+        }
+    },
+    methods:{
+        itemButton(){
+            this.$emit('itemBtn')
         }
     }
 }

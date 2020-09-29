@@ -1,10 +1,10 @@
 <template>
-    <div class='hotelOffers'>
-        <NavBar :title="hotelOffers.title"></NavBar>
+    <div class='TourismServices'>
+        <NavBar :title="TourismServices.title"></NavBar>
         <div class='content'>
             <div class='main'>
             <div>
-              <EachItem v-for='(li,index) in hotelOffers.list' :key="index" :list='li'></EachItem>
+              <EachItem v-for='(li,index) in TourismServices.list' :key="index" :list='li' @itemBtn='itemBtn(index)'></EachItem>
             </div>
         </div>
         </div>
@@ -15,20 +15,25 @@
 import NavBar from '@/components/navBar.vue'
 import EachItem from '@/components/eachItem.vue'
 import Model1 from '@/components/model1.vue'
-import {hotelOffers} from '@/assets/js/data.js'
+import {TourismServices} from '@/assets/js/data.js'
 
 export default{
-    name:'hotelOffers',
+    name:'TourismServices',
     components:{ NavBar, Model1, EachItem },
     data(){
         return{
-            hotelOffers
+            TourismServices
+        }
+    },
+    methods:{
+        itemBtn(index){
+            this.$router.push('/TourismServicesDetail')
         }
     }
 }
 </script>  
 <style lang="scss">
-.hotelOffers{
+.TourismServices{
     .content{
         top:64px;
         .main{

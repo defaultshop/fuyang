@@ -21,6 +21,54 @@ const routes = [
       title: '酒店优惠'
     }
   },
+  {
+    path: '/hotelOffersDetail', //酒店优惠详情  
+    name: 'hotelOffersDetail',
+    component: () => import ('@/views/hotelOffers/hotelOffersDetail.vue'),
+    meta: {
+      title: '酒店优惠'
+    }
+  },
+  {
+    path: '/TourismServices', //旅游服务  
+    name: 'TourismServices',
+    component: () => import ('@/views/TourismServices/index.vue'),
+    meta: {
+      title: '旅游服务'
+    }
+  },
+  {
+    path: '/TourismServicesDetail', //旅游服务详情
+    name: 'TourismServicesDetail',
+    component: () => import ('@/views/TourismServices/TourismServicesDetail.vue'),
+    meta: {
+      title: '旅游服务'
+    }
+  },
+  {
+    path: '/medicalService', //医疗服务选择页  
+    name: 'medicalService',
+    component: () => import ('@/views/medicalService/index.vue'),
+    meta: {
+      title: '医疗服务'
+    }
+  },
+  {
+    path: '/healthContact', //保健联系人首页 
+    name: 'healthContact',
+    component: () => import ('@/views/medicalService/healthContact.vue'),
+    meta: {
+      title: '保健联系人'
+    }
+  },
+  {
+    path: '/healthContactDetail', //保健联系人详情 
+    name: 'healthContactDetail',
+    component: () => import ('@/views/medicalService/healthContactDetail.vue'),
+    meta: {
+      title: '保健联系人'
+    }
+  },
 ]
 
 const router = new VueRouter({
