@@ -6,6 +6,30 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/', //酒店优惠
+    name: 'home',
+    component: () => import ('@/views/home/index.vue'),
+    meta: {
+      title: '个人中心'
+    }
+  },
+  {
+    path: '/accredit',
+    name: 'accredit',
+    component: () => import ('@/views/home/accredit.vue'),
+    meta: {
+      title: '富阳人才码'
+    }
+  },
+  {
+    path: '/levelDetail',
+    name: 'levelDetail',
+    component: () => import ('@/views/home/levelDetail.vue'),
+    meta: {
+      title: '富阳人才码'
+    }
+  },
+  {
     path: '/accessControl', //区政府大门出入
     name: 'accessControl',
     component: () => import ('@/views/accessControl/index.vue'),
