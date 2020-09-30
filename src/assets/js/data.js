@@ -149,3 +149,47 @@ export const healthContactDetail = {  //保健联系人详情
     time: '9:00 ~ 17:00',
     tel:'0571-56006612'
 };
+
+export const medicalAppointment = {  //体检预约 
+    title:'体检预约',
+    img: require('@/assets/image/medicalBg.png'),
+    tabName:['预约说明','联系医院'],
+    tab1:'我们为杭州高级人才提供保健联系人和省级、市级医院联系人的服务。若您有医疗保健、就诊就医方面的问题，欢迎使用电话联系。',
+    tab2:
+    [
+      {
+        img:require('../image/newcareIcon.png'),  
+        header:'杭州第一人民医院',
+        tip:'4号楼3楼303室（综合保健门诊）',
+        telIcon:require('@/assets/image/tel.png'),
+      },
+      {
+        img:require('../image/newcareIcon.png'),  
+        header:'邵逸夫医院',
+        tip:'杭州市江干区庆春东路3号',
+        telIcon:require('@/assets/image/tel.png'),
+      },
+    ]
+};
+
+export const venuevBooking = {  //场地预约 
+    title:'场地预约',
+    img: require('@/assets/image/medicalBg.png'),
+    tabName:['预约说明','场地列表'],
+    tab1:'我们为杭州高级人才提供保健联系人和省级、市级医院联系人的服务。若您有医疗保健、就诊就医方面的问题，欢迎使用电话联系。',
+    tab2:
+    [
+      {
+        header:'区影剧院',
+        telIcon:require('@/assets/image/tel.png'),
+      },
+      {
+        header:'富春山馆',
+        telIcon:require('@/assets/image/tel.png'),
+      },
+      {
+        header:'大学生创业“梦工厂”',
+        telIcon:require('@/assets/image/tel.png'),
+      },
+    ]
+};

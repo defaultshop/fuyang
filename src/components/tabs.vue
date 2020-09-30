@@ -1,6 +1,6 @@
 <template>
 <div class='tab'>
-    <van-tabs v-model="active" sticky>
+    <van-tabs v-model="active" sticky title-active-color='#D3AA6C'>
         <van-tab :title="tabList.tabName[0]">
             <slot name='tab1'></slot>
         </van-tab>

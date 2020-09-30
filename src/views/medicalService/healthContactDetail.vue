@@ -36,13 +36,18 @@ export default{
 
 <style lang="scss">
 .healthContactDetail{
-    .main{
-        padding: 20px 15px 0;
-        text-align: justify;
-        line-height: 32px;
-        p{
-            border-bottom: 1px solid #EEEEEE;
+    .content{
+        top:205px;
+        .main{
+            padding: 20px 15px 0;
+            line-height: 32px;
+            text-align: justify;
+            p{
+                border-bottom: 1px solid #EEEEEE;
+                padding: 10px 0;
+            }
         }
     }
+   
 }
 </style>

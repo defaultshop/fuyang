@@ -6,7 +6,8 @@
                 <p>{{list.header}}</p>
                 <p>
                    <span>{{list.tip}}</span>
-                   <span> |{{list.km}}km</span>
+                   <span v-if='isShow'> |{{list.km}}km</span>
+                   <img  v-else :src="list.telIcon" alt="" class='icon'>
                 </p>
             </div>
     </div>
@@ -30,6 +31,10 @@ export default{
         list:{
             type:Object,
             default:''
+        },
+        isShow:{
+           type:Boolean,
+           default:true
         }
     },
     data(){
@@ -83,6 +88,10 @@ export default{
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
+            }
+            .icon{
+                height: 15px;
+                width: 15px;
             }
             }
     }
