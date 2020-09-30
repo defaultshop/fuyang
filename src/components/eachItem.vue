@@ -4,10 +4,13 @@
             <img :src="list.img" alt="" class='leftImg'>
             <div class='rightText'>
                 <p>{{list.header}}</p>
-                <p>
+                <p v-if='isShow' class='rightTextp2'>
                    <span>{{list.tip}}</span>
-                   <span v-if='isShow'> |{{list.km}}km</span>
-                   <img  v-else :src="list.telIcon" alt="" class='icon'>
+                   <span> |{{list.km}}km</span>
+                </p>
+                <p v-else class='rightTextp3'>
+                   <span>{{list.tip}}</span>
+                   <img  :src="list.telIcon" alt="" class='icon'>
                 </p>
             </div>
     </div>
@@ -54,14 +57,15 @@ export default{
 .eachItem{
     border-bottom: 1px solid #EEEEEE;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 0;
     .leftImg{
         width: 90px;
         height: 90px;
     }
     .rightText{
+        width: 100%;
         text-align: left;
         color: #333333;
         line-height: 21px;
@@ -73,7 +77,7 @@ export default{
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
         }
-        p:nth-child(2){
+       .rightTextp2{
             color:#8C8C8C;
             font-size: 12px;
             font-family: PingFangSC-Regular, PingFang SC;
@@ -89,11 +93,20 @@ export default{
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
             }
+        }
+        .rightTextp3{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span:first-child{
+                overflow : hidden;
+                text-overflow: ellipsis;
+            }
             .icon{
                 height: 15px;
                 width: 15px;
             }
-            }
+        }
     }
 }
 </style>

@@ -323,7 +323,7 @@ export default {
     getUserIdByToken() {
       var self = this;
       // 用户登陆
-      ajax(baseUrl1 +"smk_hztalent_stu/front/app/home/queryUserAuth",{ accessToken: this.token}
+      ajax(baseUrl1 +"smk_fytalent_stu/front/app/home/queryUserAuth",{ accessToken: this.token}
       ).then(res => {
         // 是否授权
         if (res.response) {

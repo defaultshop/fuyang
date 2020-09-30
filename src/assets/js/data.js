@@ -1,4 +1,4 @@
-export const accessControl = { // //healthContactDetail
+export const accessControl = { 
     title:'区政府大门出入',
     text:'A-D类人才可获得区政府大院出入资格。通过技术对接大院闸机系统，实现扫码进闸，人才刷码即可入院。',
     img: require('@/assets/image/accessControl.png'),
@@ -46,7 +46,7 @@ export const hotelOffersDetail = {  //酒店优惠详情
 };
 
 
-export const TourismServices = {  //healthContact
+export const TourismServices = {  
     title:'旅游服务',
     list:[
         {
@@ -192,4 +192,49 @@ export const venuevBooking = {  //场地预约
         telIcon:require('@/assets/image/tel.png'),
       },
     ]
+};
+
+export const Transportation = { 
+    title:'交通出行',
+    text:'A-D类人才可获得区政府大院出入资格。通过技术对接大院闸机系统，实现扫码进闸，人才刷码即可入院。',
+    img: require('@/assets/image/trasitonBg.png'),
+    btnText: '去使用',
+    itemList: [   
+        {
+           type: ['A','B','C'],   
+           icon:  require('@/assets/image/free.png'), 
+           header: '全年免费',
+           tip:'无需花钱，享受人才出行福利'
+        },
+        {
+           type: ['A','B','C'],   
+           icon:  require('@/assets/image/codeIcon.png'), 
+           header: '无需购票',
+           tip:'手机刷码即可便携乘公交'
+        },
+        {
+           type: ['D','E'],   
+           icon:  require('@/assets/image/discount.png'), 
+           header: '每月发放定额优惠',
+           tip:'30元/月，月底清零，记得使用'
+       },
+       {
+           type: ['D','E'],   
+           icon:  require('@/assets/image/codeIcon.png'), 
+           header: '无需购票',
+           tip:'手机刷码即可便携乘公交'
+       },
+       {
+           type: ['F'],   
+           icon:  require('@/assets/image/discount.png'), 
+           header: '每月发放定额优惠',
+           tip:'20元/月，月底清零，记得使用'
+       },
+       {
+           type: ['F'],   
+           icon:  require('@/assets/image/codeIcon.png'),  
+           header: '无需购票',
+           tip:'手机刷码即可便携乘公交'
+       },
+       ]
 };

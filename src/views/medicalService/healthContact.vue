@@ -44,6 +44,7 @@ export default{
 <style lang="scss">
 .healthContact{
     .content{
+        top:205px;
         .main{
             padding: 0 15px;
             text-align: justify;

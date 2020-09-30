@@ -10,7 +10,7 @@
                   </div>
                   <div slot='tab2'>
                       <div>
-                        <EachItem v-for='(li,index) in medicalAppointment.tab2' :key="index" :isShow='false' :list='li' @itemBtn='itemBtn(index)'></EachItem>
+                        <EachItem v-for='(li,index) in medicalAppointment.tab2' :key="index" :isShow='false' :list='li'></EachItem>
                       </div>
                   </div>
               </Tabs>
@@ -42,15 +42,15 @@ export default{
 .content{
     top:205px;
     .main{
-            padding: 10px 15px 0;
+            padding: 10px 0;
             text-align: justify;
             line-height: 32px;
             .tab2title{
-            line-height: 32px;
-            color:#333333;
-            display: flex;
-            justify-items: center;
-            align-items: center;
+                line-height: 32px;
+                color:#333333;
+                display: flex;
+                justify-items: center;
+                align-items: center;
             .icon{
                 height:16px;
                 width: 16px;

@@ -4,7 +4,7 @@
         <div class='content'>
             <div class='main'>
             <div>
-              <EachItem v-for='(li,index) in hotelOffers.list' :key="index" :list='li'></EachItem>
+              <EachItem v-for='(li,index) in hotelOffers.list' :key="index" :list='li' @itemBtn='itemBtn(index)'></EachItem>
             </div>
         </div>
         </div>
@@ -24,6 +24,11 @@ export default{
         return{
             hotelOffers
         }
+    },
+    methods:{
+      itemBtn(index){
+        this.$router.push('/hotelOffersDetail')
+      }
     }
 }
 </script>  
@@ -32,7 +37,6 @@ export default{
     .content{
         top:64px;
         .main{
-            padding: 0 15px;
             text-align: justify;
             line-height: 32px;
         }

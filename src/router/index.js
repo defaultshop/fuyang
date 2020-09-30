@@ -86,6 +86,14 @@ const routes = [
     }
   },
   {
+    path: '/healthContactDetail', //保健联系人详情
+    name: 'healthContactDetail',
+    component: () => import ('@/views/medicalService/healthContactDetail.vue'),
+    meta: {
+      title: '保健联系人'
+    }
+  },
+  {
     path: '/medicalAppointment', //体检预约 
     name: 'medicalAppointment',
     component: () => import ('@/views/medicalService/medicalAppointment.vue'),
@@ -99,6 +107,14 @@ const routes = [
     component: () => import ('@/views/venuevBooking/index.vue'),
     meta: {
       title: '场地预约'
+    }
+  },
+  {
+    path: '/Transportation', //交通出行 
+    name: 'Transportation',
+    component: () => import ('@/views/Transportation/index.vue'),
+    meta: {
+      title: '交通出行'
     }
   },
 ]

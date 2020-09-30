@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='accessControl'>
         <NavBar :title="accessControl.title"></NavBar>
         <Model1 
           :list='accessControl'>
@@ -28,10 +28,16 @@ export default{
 </script>  
 
 <style lang="scss">
- .main{
-        padding: 20px 15px 0;
-        text-align: justify;
-        text-indent: 30px;
-        line-height: 32px;
+.accessControl{
+    .content{
+        top:205px;
+        .main{
+            padding: 20px 15px 0;
+            text-align: justify;
+            text-indent: 30px;
+            line-height: 32px;
+        }
     }
+}
+ 
 </style>

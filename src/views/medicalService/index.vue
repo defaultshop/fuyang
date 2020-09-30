@@ -6,9 +6,9 @@
               class='eachItem' 
               v-for='(li,index) in medicalService.list' 
               :key='index'
-              :style="{background:'url('+li.img+')', backgroundSize:'100% 100%'}"
-            >
-                <span>{{li.name}}</span>
+              @click='itemBtn(index)'
+              :style="{background:'url('+li.img+')', backgroundSize:'100% 100%'}">
+              <span>{{li.name}}</span>
             </div>
         </div>
     </div>
@@ -24,6 +24,15 @@ export default{
     data(){
         return{
             medicalService
+        }
+    },
+    methods:{
+        itemBtn(index){
+            if(index==0){
+                this.$router.push('/healthContact') //保健联系人
+            } else if(index==1){
+                this.$router.push('/medicalAppointment') //体检预约
+            }
         }
     }
 }

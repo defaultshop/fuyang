@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='hotelOffersDetail'>
         <NavBar :title="hotelOffersDetail.title"></NavBar>
         <Model1 
           :list='hotelOffersDetail'>
@@ -61,7 +61,10 @@ export default{
 </script>  
 
 <style lang="scss">
- .main{
+.hotelOffersDetail{
+  .content{
+      top:205px;
+      .main{
         padding: 10px 15px 0;
         text-align: justify;
         line-height: 32px;
@@ -83,4 +86,7 @@ export default{
         }
         
     }
+  }  
+}
+ 
 </style>
